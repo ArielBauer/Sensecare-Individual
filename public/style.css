@@ -1,0 +1,44 @@
+#color1{
+    background-color: #f0f0f0;
+}
+#color2{
+    background-color: #f1f1f1;
+}
+#color14{
+    background-color: #dadada;
+}
+#color24{
+    background-color: #dadada;
+}
+#color34{
+    background-color: #dadada;
+}
+#color44{
+    background-color: #dadada;
+}
+
+
+/* Garante que o corpo da página ocupe 100% da viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Configurações de altura para a DIV ESQUERDA (80% Cima / 20% Baixo) */
+#left-top {
+    height: 80%;
+}
+#left-bottom {
+    height: 20%;
+}
+
+/* Configurações de altura para a DIV DIREITA (70% Cima / 30% Baixo) */
+#right-top {
+    height: 70%;
+    background-color: #c2c2c2;
+}
+#right-bottom {
+    height: 30%;
+    background-color: #b1b1b1;
+}

@@ -8,22 +8,37 @@
     <title>SenseCare</title>
 </head>
 <body>
-    <div id="left">
-        <div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="container-fluid vh-100 p-0 text-center">
+        <div class="row h-100 g-0">
+            
+            <div id="div-esquerda" class="col-8 h-100 d-flex flex-column">
+                <div id="left-top" class="row g-0 w-100 overflow-auto">
+                    <div class="col" id="color1"></div>
+                    <div class="col" id="color2"></div>
+                </div>
+
+                <div id="left-bottom" class="row g-0 w-100">
+                    <div class="col" id="color14"></div>
+                    <div class="col" id="color24"></div>
+                    <div class="col" id="color34"></div>
+                    <div class="col" id="color44"></div>
+                </div>
+            </div>
+
+            <div id="div-direita" class="col-4 h-100 d-flex flex-column">
+                <div id="right-top" class="w-100"></div>
+                <div id="right-bottom" class="w-100">
+                    <button type="button" class="btn btn-primary">Desligar</button><br><br>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Alerta</button>
+                        <button type="button" class="btn btn-primary">Rotina</button>
+                        <button type="button" class="btn btn-primary">Chamado</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="right">
-        <div></div>
-        <div></div>
-    </div>
+
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
