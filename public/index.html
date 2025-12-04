@@ -10,16 +10,17 @@
 <body>
     <div class="container-fluid vh-100 p-0 text-center">
         <div class="row h-100 g-0">
-            
+            <!-- Lado esquerdo -->
             <div id="div-esquerda" class="col-8 h-100 d-flex flex-column">
                 <div id="left-top" class="row g-0 w-100 overflow-auto">
                     <div class="col" id="color1"></div>
+                    <!-- Area para pacientes -->
                     <div class="col" id="color2">
-                        <!-- Botão para o modal -->
+                        <!-- Botão para o modal de adicionar paciente -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Adicionar paciente
                         </button>
-                        <!-- Modal -->
+                        <!-- Modal de adicionar paciente -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -81,9 +82,13 @@
                     <div class="col" id="color44"></div>
                 </div>
             </div>
-
+            <!-- Lado direito -->
             <div id="div-direita" class="col-4 h-100 d-flex flex-column">
-                <div id="right-top" class="w-100"></div>
+                <!-- Area acima -->
+                <div id="right-top" class="w-100">
+                    
+                </div>
+                <!-- Area abaixo -->
                 <div id="right-bottom" class="w-100">
                     <button type="button" class="btn btn-primary">Desligar</button><br><br>
                     <div class="btn-group" role="group" aria-label="Basic example">
