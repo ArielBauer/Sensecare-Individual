@@ -79,13 +79,50 @@ function enviaPaciente(){
     verfCpf=true; // E define a verificação do cpf como verdadeira.
   };
 
-  // Verifica se os três estão corretos para efetuar o cadastro
-  if(verfCpf==true && verfNome==true && verfData==true){
-    const modalElement = document.getElementById('staticBackdrop');
-    const modalInstancia = bootstrap.Modal.getInstance(modalElement);
-    if(modalInstancia){
-      modalInstancia.hide();
+  // Verificação final
+  if(verfCpf==true && verfNome==true && verfData==true){ // Verfica se cpf, nome e data são verdadeiros.
+    const modalElement = document.getElementById('staticBackdrop'); // Pega o elemento modal.
+    const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis
+    if(modalInstancia){ // Se a instancia estiver funcionando/existir
+      modalInstancia.hide(); // Fecha o modal.
     }else{
-      console.log('ERROR');
+      console.log('ERROR'); // Caso algo de errado, mostra ERROR no console.
+    }};
+};
+
+function enviaEnfermeiro(){
+  // Pega os elementos necessários
+  let nome = document.getElementById("nomeEnf");
+  let coren = document.getElementById("coren");
+
+  // Salva as verificações necessárias 
+  let verfNome; let verfCoren;
+
+  // Verifica se o nome não esta vazio
+  if(nome.value === ""){ // Se o input do nome está vazio,
+    nome.classList.add('is-invalid'); // Dá ao input a classe 'is-invalid'
+    verfNome=false; // E define a verificação do nome como falso.
+  }else{ // Caso não esteja vazio,
+    nome.classList.remove('is-invalid'); // Remove a classe 'is-invalid'
+    verfNome=true; // E define a verificação do nome como verdadeira.
+  };
+  
+  // Verifica o Coren
+  if(coren.value.length !== 6 || isNaN(coren.value)){ // Verifica se o coren NÃO tem 6 digitos ou se NÃO são numeros.
+    coren.classList.add('is-invalid'); // Dá ao input a classe 'is-invalid'
+    verfCoren=false; // E define a verificação do coren como falsa.
+  }else{ // O coren tem 6 digitos e todos são numeros, então
+    coren.classList.remove('is-invalid'); // Remove a classe 'is-invalid'
+    verfCoren=true; // E define a verificação do coren como verdadeira.
+  };
+
+  // Verificação final
+  if(verfCoren==true && verfNome==true){ // Verfica se o coren e o nome são verdadeiros.
+    const modalElement = document.getElementById('staticBackdrop'); // Pega o elemento modal.
+    const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis,
+    if(modalInstancia){ // Se a instancia estiver funcionando/existir,
+      modalInstancia.hide(); // Fecha o modal.
+    }else{
+      console.log('ERROR'); // Caso algo de errado, mostra ERROR no console.
     }};
 };
