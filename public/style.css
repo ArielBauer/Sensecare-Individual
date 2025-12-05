@@ -17,6 +17,12 @@
     background-color: #dadada;
 }
 
+#alerta{
+    background-color: black;
+    height: 300px;
+    width: 300px;
+}
+
 
 /* Garante que o corpo da página ocupe 100% da viewport */
 html, body {
@@ -37,6 +43,10 @@ html, body {
 #right-top {
     height: 70%;
     background-color: #c2c2c2;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 #right-bottom {
     height: 30%;

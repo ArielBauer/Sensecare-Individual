@@ -126,3 +126,18 @@ function enviaEnfermeiro(){
       console.log('ERROR'); // Caso algo de errado, mostra ERROR no console.
     }};
 };
+
+const alerta = document.getElementById('alerta');
+function mandaSinal(sinal){
+  if(sinal=='critico'){
+    alerta.style.backgroundColor = 'red';
+  }else if(sinal=='rotina'){
+    alerta.style.backgroundColor = 'orange';
+  }else if(sinal=='chamado'){
+    alerta.style.backgroundColor = 'green';
+  };
+  
+  if(sinal=='desliga'){
+    alerta.style.backgroundColor = 'black';
+  };
+};

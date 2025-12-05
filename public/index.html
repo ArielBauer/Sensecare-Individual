@@ -12,6 +12,7 @@
         <div class="row h-100 g-0">
             <!-- Lado esquerdo -->
             <div id="div-esquerda" class="col-8 h-100 d-flex flex-column">
+                <!-- Area acima -->
                 <div id="left-top" class="row g-0 w-100 overflow-auto">
                     <!-- Area para enfermeiros -->
                     <div class="col" id="color1">
@@ -107,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Area baixo -->
                 <div id="left-bottom" class="row g-0 w-100">
                     <div class="col" id="color14"></div>
                     <div class="col" id="color24"></div>
@@ -119,15 +120,15 @@
             <div id="div-direita" class="col-4 h-100 d-flex flex-column">
                 <!-- Area acima -->
                 <div id="right-top" class="w-100">
-                    
+                    <div id="alerta"></div>
                 </div>
                 <!-- Area abaixo -->
                 <div id="right-bottom" class="w-100">
-                    <button type="button" class="btn btn-primary">Desligar</button><br><br>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary">Alerta</button>
-                        <button type="button" class="btn btn-primary">Rotina</button>
-                        <button type="button" class="btn btn-primary">Chamado</button>
+                    <button type="button" class="btn btn-primary" onclick="mandaSinal('desliga')">Desligar</button><br><br>
+                    <div class="btn-group" role="group" aria-label="Basic ">
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('critico')">Alerta</button>
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('rotina')">Rotina</button>
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('chamado')">Chamado</button>
                     </div>
                 </div>
             </div>
