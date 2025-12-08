@@ -19,6 +19,7 @@ const formattedDate = `${year}-${month}-${day}`;
 dataInput.setAttribute('max', formattedDate);
 
 
+let pctQuantidade=1
 // Função para enviar novo paciente
 function enviaPaciente(){
   // Pega os elementos necessários
@@ -81,15 +82,44 @@ function enviaPaciente(){
 
   // Verificação final
   if(verfCpf==true && verfNome==true && verfData==true){ // Verfica se cpf, nome e data são verdadeiros.
+    //   if(pctQuantidade>4){ // Verifica a quantidade de pacientes.
+    //   const alertPlaceholder = document.getElementById('liveAlertPlaceholder2');
+    //   const appendAlert = (message, type) => {
+    //     const wrapper = document.createElement('div')
+    //     wrapper.innerHTML = [
+    //       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    //       `   <div>${message}</div>`,
+    //       '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    //       '</div>'
+    //     ].join('')
+    //     alertPlaceholder.append(wrapper)};
+    //   appendAlert('Número maximo de pacientes alcançado.', 'danger');
+    // }else{ // Se tiver menos de 4 pacientes, adiciona o novo.
+    //   const lista = document.getElementById("ol2");
+    //   let li = document.createElement("li");
+    //   li.textContent = `Paciente: ${nome.value}`
+    //   lista.appendChild(li);
+    //   let ul = document.createElement("ul");
+    //   ul.textContent = `CPF: ${cpf.value}`;
+    //   li.appendChild(ul);
+    //   let ul2 = document.createElement("ul");
+    //   ul2.textContent = `Idade: ${idade} anos`;
+    //   li.appendChild(ul2);
+    //   pctQuantidade++ // Soma mais um a contagem de pacientes.
+    // };
+
+    nome=''; cpf=''; dataInput=''; // Limpa os inputs.
     const modalElement = document.getElementById('staticBackdrop'); // Pega o elemento modal.
     const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis
     if(modalInstancia){ // Se a instancia estiver funcionando/existir
       modalInstancia.hide(); // Fecha o modal.
-    }else{
-      console.log('ERROR'); // Caso algo de errado, mostra ERROR no console.
+    }else{ // Caso algo de errado, mostra ERROR no console.
+      console.log('ERROR');
     }};
 };
 
+let enfQuantidade=1
+// Função para enviar novo enfermeiro
 function enviaEnfermeiro(){
   // Pega os elementos necessários
   let nome = document.getElementById("nomeEnf");
@@ -118,12 +148,36 @@ function enviaEnfermeiro(){
 
   // Verificação final
   if(verfCoren==true && verfNome==true){ // Verfica se o coren e o nome são verdadeiros.
+    if(enfQuantidade>4){ // Verifica a quantidade de enfermeiros.
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+        alertPlaceholder.append(wrapper)};
+      appendAlert('Número maximo de enfermeiros alcançado.', 'danger');
+    }else{ // Se tiver menos de 4 enfermeiros, adiciona o novo.
+      const lista = document.getElementById("ol");
+      let li = document.createElement("li");
+      li.textContent = `Enfermeiro(a) ${nome.value}`
+      lista.appendChild(li);
+      let ul = document.createElement("ul");
+      ul.textContent = `Coren: ${coren.value}`;
+      li.appendChild(ul);
+      enfQuantidade++ // Soma mais um a contagem de enfermeiros.
+    };
+
+    nome.value=''; coren.value=''; // Limpa os inputs.
     const modalElement = document.getElementById('staticBackdrop'); // Pega o elemento modal.
     const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis,
     if(modalInstancia){ // Se a instancia estiver funcionando/existir,
       modalInstancia.hide(); // Fecha o modal.
-    }else{
-      console.log('ERROR'); // Caso algo de errado, mostra ERROR no console.
+    }else{ // Caso algo de errado, mostra ERROR no console.
+      console.log('ERROR');
     }};
 };
 

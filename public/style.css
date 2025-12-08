@@ -4,16 +4,7 @@
 #color2{
     background-color: #f1f1f1;
 }
-#color14{
-    background-color: #dadada;
-}
-#color24{
-    background-color: #dadada;
-}
-#color34{
-    background-color: #dadada;
-}
-#color44{
+#color{
     background-color: #dadada;
 }
 
@@ -32,10 +23,10 @@ html, body {
 
 /* Configurações de altura para a DIV ESQUERDA (80% Cima / 20% Baixo) */
 #left-top {
-    height: 80%;
+    height: 85%;
 }
 #left-bottom {
-    height: 20%;
+    height: 15%;
 }
 
 /* Configurações de altura para a DIV DIREITA (70% Cima / 30% Baixo) */

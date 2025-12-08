@@ -16,38 +16,44 @@
                 <div id="left-top" class="row g-0 w-100 overflow-auto">
                     <!-- Area para enfermeiros -->
                     <div class="col" id="color1">
-                        <!-- Botão para o modal de adicionar enfermeiros -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar enfermeiro</button>
-                        <!-- Modal de adicionar enfermeiros -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar enfermeiro(a)</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="input-group mb-3 has-validation">
-                                        <span class="input-group-text" id="basic-addon1">Nome</span>
-                                        <input type="text" id="nomeEnf" class="form-control" aria-describedby="basic-addon1">
-                                        <div class="invalid-feedback text-start">
-                                            * Insira o nome.
+                        <div><!-- Botão para o modal de adicionar enfermeiros -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar enfermeiro</button>
+                            <!-- Modal de adicionar enfermeiros -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar enfermeiro(a)</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group mb-3 has-validation">
+                                            <span class="input-group-text" id="basic-addon1">Nome</span>
+                                            <input type="text" id="nomeEnf" class="form-control" aria-describedby="basic-addon1">
+                                            <div class="invalid-feedback text-start">
+                                                * Insira o nome.
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3 has-validation">
+                                            <span class="input-group-text" id="basic-addon1">Coren</span>
+                                            <input type="text" id="coren" class="form-control" aria-describedby="basic-addon1">
+                                            <div class="invalid-feedback  text-start">
+                                                * Insira um Coren válido.
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="input-group mb-3 has-validation">
-                                        <span class="input-group-text" id="basic-addon1">Coren</span>
-                                        <input type="text" id="coren" class="form-control" aria-describedby="basic-addon1">
-                                        <div class="invalid-feedback  text-start">
-                                            * Insira um Coren válido.
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary" onclick="enviaEnfermeiro()">Enviar</button>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary" onclick="enviaEnfermeiro()">Enviar</button>
                                 </div>
                             </div>
+                            </div>
                         </div>
+                        <div class="text-start">
+                            <h4>Enfermeiros</h4>
+                            <ol id="ol"></ol>
+                            <div id="liveAlertPlaceholder"></div>
                         </div>
                     </div>
                     <!-- Area para pacientes -->
@@ -110,10 +116,10 @@
                 </div>
                 <!-- Area baixo -->
                 <div id="left-bottom" class="row g-0 w-100">
-                    <div class="col" id="color14"></div>
-                    <div class="col" id="color24"></div>
-                    <div class="col" id="color34"></div>
-                    <div class="col" id="color44"></div>
+                    <div class="col" id="color"></div>
+                    <div class="col" id="color"></div>
+                    <div class="col" id="color"></div>
+                    <div class="col" id="color"></div>
                 </div>
             </div>
             <!-- Lado direito -->
