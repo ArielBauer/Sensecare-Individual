@@ -127,17 +127,21 @@ function enviaEnfermeiro(){
     }};
 };
 
-const alerta = document.getElementById('alerta');
+const alerta = document.getElementById('pulseira');
 function mandaSinal(sinal){
   if(sinal=='critico'){
-    alerta.style.backgroundColor = 'red';
-  }else if(sinal=='rotina'){
-    alerta.style.backgroundColor = 'orange';
-  }else if(sinal=='chamado'){
-    alerta.style.backgroundColor = 'green';
+    alerta.src = '/imgs/alerta.jpg';
+  };
+
+  if(sinal=='rotina'){
+    alerta.src = '/imgs/lembrete.jpg';
+  };
+
+  if(sinal=='chamado'){
+    alerta.src = '/imgs/chamado.jpg';
   };
   
   if(sinal=='desliga'){
-    alerta.style.backgroundColor = 'black';
+    alerta.src = '/imgs/defaut.jpg';
   };
 };

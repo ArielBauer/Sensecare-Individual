@@ -120,12 +120,14 @@
             <div id="div-direita" class="col-4 h-100 d-flex flex-column">
                 <!-- Area acima -->
                 <div id="right-top" class="w-100">
-                    <div id="alerta"></div>
+                    <div id="alerta">
+                        <img src="/imgs/defaut.jpg" class="mx-auto d-block" id="pulseira">
+                    </div>
                 </div>
                 <!-- Area abaixo -->
                 <div id="right-bottom" class="w-100">
                     <button type="button" class="btn btn-primary" onclick="mandaSinal('desliga')">Desligar</button><br><br>
-                    <div class="btn-group" role="group" aria-label="Basic ">
+                    <div class="btn-group" role="group" aria-label="Basic">
                         <button type="button" class="btn btn-primary" onclick="mandaSinal('critico')">Alerta</button>
                         <button type="button" class="btn btn-primary" onclick="mandaSinal('rotina')">Rotina</button>
                         <button type="button" class="btn btn-primary" onclick="mandaSinal('chamado')">Chamado</button>
