@@ -75,4 +75,10 @@ Abaixo, a lista de requisitos organizados por prioridade de implementação nest
 
 ## 💻 Como rodar o projeto
 
-*(Instruções de instalação serão adicionadas aqui futuramente.)*
+ 1. Clone o repositório:
+    git clone https://github.com/ArielBauer/Sensecare-Individual
+ 2. Abra o projeto no VS Code.
+ 3. Instale a extensão Live Server, caso não tenha.
+ 4. Clique no arquivo index.html e clique em Go Live.
+
+* O site deve abrir no seu navegador padrão e estar rodando normalmente.
