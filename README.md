@@ -55,21 +55,21 @@ Este protótipo utiliza tecnologias web para simular a interface e a lógica:
 Abaixo, a lista de requisitos organizados por prioridade de implementação neste protótipo.
 
 ### 🔴 Prioridade Alta (MVP)
-- [ ] **Cadastro de Pacientes:** Inserção de dados para lógica de prioridade e medicação.
-- [ ] **Tela Principal:** Layout com lista de enfermeiros/pacientes e área de configuração.
+- [ ] **Cadastro de Pacientes:** Inserção de dados para lógica de prioridade.
+- [ ] **Tela Principal:** Layout com lista de enfermeiros/pacientes.
 - [ ] **Simulação da Pulseira do Enfermeiro:** Interface visual que receberá as notificações.
 - [ ] **Lógica de Alertas Coloridos:**
     - Vermelho (Crítico/Pressão).
     - Amarelo (Rotina/Remédio/Decúbito).
     - Verde (Chamado do paciente).
-- [ ] **Cadastro de Enfermeiros:** Limite de 4 profissionais com dados básicos.
+- [ ] **Cadastro de Enfermeiros:** Limite de 4 profissionais e 4 pacientes com dados básicos.
 
 ### 🟡 Prioridade Média
+- [ ] **Identidade Visual Aprimorada:** Refinamento dos ícones e paleta de cores.
 - [ ] **Login:** Autenticação de enfermeiro via CPF e Senha.
 - [ ] **Edição:** Alterar dados de pacientes já cadastrados.
-- [ ] **Confirmação de Chamada em Equipe:** Visualização de quando outro enfermeiro já atendeu um chamado.
 - [ ] **Histórico do Paciente:** Log de doenças, histórico atual e medicações administradas.
-- [ ] **Identidade Visual Aprimorada:** Refinamento dos ícones e paleta de cores.
+- [ ] **Confirmação de Chamada em Equipe:** Visualização de quando outro enfermeiro já atendeu um chamado.
 
 ---
 

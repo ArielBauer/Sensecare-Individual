@@ -1,12 +1,20 @@
 #color1{
-    background-color: #f0f0f0;
-}
-#color2{
     background-color: #f1f1f1;
 }
-#color{
-    background-color: #dadada;
+#color2{
+    background-color: #f3f3f3;
 }
+#color{
+    background-color: #c3c3c3;
+}
+
+#areaBotaoModal{
+    height: 10%;
+}
+#areaLista{
+    height: 90%;
+}
+
 
 #alerta{
     height: 300px;

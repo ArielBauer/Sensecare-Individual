@@ -16,41 +16,41 @@
                 <div id="left-top" class="row g-0 w-100 overflow-auto">
                     <!-- Area para enfermeiros -->
                     <div class="col" id="color1">
-                        <div><!-- Botão para o modal de adicionar enfermeiros -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar enfermeiro</button>
+                        <div id="areaBotaoModal"><!-- Botão para o modal de adicionar enfermeiros -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Adicionar enfermeiro</button>
                             <!-- Modal de adicionar enfermeiros -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar enfermeiro(a)</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="input-group mb-3 has-validation">
-                                            <span class="input-group-text" id="basic-addon1">Nome</span>
-                                            <input type="text" id="nomeEnf" class="form-control" aria-describedby="basic-addon1">
-                                            <div class="invalid-feedback text-start">
-                                                * Insira o nome.
+                            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel2">Adicionar enfermeiro(a)</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group mb-3 has-validation">
+                                                <span class="input-group-text" id="basic-addon1_2">Nome</span>
+                                                <input type="text" id="nomeEnf" class="form-control" aria-describedby="basic-addon1_2">
+                                                <div class="invalid-feedback text-start">
+                                                    * Insira o nome.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3 has-validation">
+                                                <span class="input-group-text" id="basic-addon2_2">Coren</span>
+                                                <input type="text" id="coren" class="form-control" aria-describedby="basic-addon2_2">
+                                                <div class="invalid-feedback text-start">
+                                                    * Insira um Coren válido.
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="input-group mb-3 has-validation">
-                                            <span class="input-group-text" id="basic-addon1">Coren</span>
-                                            <input type="text" id="coren" class="form-control" aria-describedby="basic-addon1">
-                                            <div class="invalid-feedback  text-start">
-                                                * Insira um Coren válido.
-                                            </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary" onclick="enviaEnfermeiro()">Enviar</button>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-primary" onclick="enviaEnfermeiro()">Enviar</button>
                                     </div>
                                 </div>
                             </div>
-                            </div>
                         </div>
-                        <div class="text-start">
+                        <div class="text-start" id="areaLista">
                             <h4>Enfermeiros</h4>
                             <ol id="ol"></ol>
                             <div id="liveAlertPlaceholder"></div>
@@ -58,59 +58,65 @@
                     </div>
                     <!-- Area para pacientes -->
                     <div class="col" id="color2">
-                        <!-- Botão para o modal de adicionar paciente -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar paciente</button>
-                        <!-- Modal de adicionar paciente -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar paciente</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="input-group mb-3 has-validation">
-                                        <span class="input-group-text" id="basic-addon1">Nome</span>
-                                        <input type="text" id="nome" class="form-control" aria-describedby="basic-addon1">
-                                        <div class="invalid-feedback text-start">
-                                            * Insira o nome.
+                        <div id="areaBotaoModal"><!-- Botão para o modal de adicionar paciente -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar paciente</button>
+                            <!-- Modal de adicionar paciente -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar paciente</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group mb-3 has-validation">
+                                            <span class="input-group-text" id="basic-addon1">Nome</span>
+                                            <input type="text" id="nome" class="form-control" aria-describedby="basic-addon1">
+                                            <div class="invalid-feedback text-start">
+                                                * Insira o nome.
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3 has-validation">
+                                            <span class="input-group-text" id="basic-addon1">CPF</span>
+                                            <input type="text" id="cpf" class="form-control" aria-describedby="basic-addon1">
+                                            <div class="invalid-feedback  text-start">
+                                                * Insira um CPF válido.
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3 has-validation">
+                                            <span class="input-group-text" id="basic-addon1">Data de Nascimento</span>
+                                            <input type="date" id="data" class="form-control" aria-describedby="basic-addon1">
+                                            <div class="invalid-feedback text-start">
+                                                * Selecione a data de nascimento.
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="M">
+                                                <label class="form-check-label" for="inlineRadio2">Masculino</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="F">
+                                                <label class="form-check-label" for="inlineRadio3">Feminino</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="N" checked>
+                                                <label class="form-check-label" for="inlineRadio1">Não informado</label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="input-group mb-3 has-validation">
-                                        <span class="input-group-text" id="basic-addon1">CPF</span>
-                                        <input type="text" id="cpf" class="form-control" aria-describedby="basic-addon1">
-                                        <div class="invalid-feedback  text-start">
-                                            * Insira um CPF válido.
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary" onclick="enviaPaciente()">Enviar</button>
                                     </div>
-                                    <div class="input-group mb-3 has-validation">
-                                        <span class="input-group-text" id="basic-addon1">Data de Nascimento</span>
-                                        <input type="date" id="data" class="form-control" aria-describedby="basic-addon1">
-                                        <div class="invalid-feedback text-start">
-                                            * Selecione a data de nascimento.
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="M">
-                                            <label class="form-check-label" for="inlineRadio2">Masculino</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="F">
-                                            <label class="form-check-label" for="inlineRadio3">Feminino</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="N" checked>
-                                            <label class="form-check-label" for="inlineRadio1">Não informado</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary" onclick="enviaPaciente()">Enviar</button>
                                 </div>
                             </div>
+                            </div>
                         </div>
+                        <div class="text-start" id="areaLista">
+                            <h4>Pacientes</h4>
+                            <ol id="ol2"></ol>
+                            <div id="liveAlertPlaceholder2"></div>
                         </div>
                     </div>
                 </div>
