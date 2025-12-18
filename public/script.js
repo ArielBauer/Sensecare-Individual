@@ -182,6 +182,32 @@ function enviaEnfermeiro(){
   };
 };
 
+function limpaInput(input){
+  if(input=='enf'){ // Limpa o input dos enfermeiros
+    // Pega os elementos necessários
+    let nome = document.getElementById("nomeEnf");
+    let coren = document.getElementById("coren");
+
+    nome.value=''; coren.value=''; // Limpa os inputs.
+    // Remove a classe 'is-invalid'
+    coren.classList.remove('is-invalid');
+    nome.classList.remove('is-invalid');
+  };
+  if(input=='paciente'){ // Limpa o input dos pacientes
+    // Pega os elementos necessários
+    let nome = document.getElementById("nome");
+    let cpf = document.getElementById("cpf");
+    let dataInput=document.getElementById("data");
+
+
+    nome.value=''; cpf.value=''; // Limpa os inputs.
+    // Remove a classe 'is-invalid'
+    nome.classList.remove('is-invalid');
+    cpf.classList.remove('is-invalid');
+    dataInput.classList.remove('is-invalid');
+  };
+};
+
 const alerta = document.getElementById('pulseira');
 function mandaSinal(sinal){
   if(sinal=='critico'){
