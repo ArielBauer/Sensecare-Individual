@@ -1,8 +1,6 @@
 // Impede que o usuario possa digitar no input da data
 let dataInput=document.getElementById("data"); // Pega o input da data, que será ultilizado depois.
 dataInput.addEventListener("keydown", e => e.preventDefault());
-dataInput.addEventListener("keypress", e => e.preventDefault());
-dataInput.addEventListener("keyup", e => e.preventDefault());
 
 // Impede que possa colocar a data maior que o dia de hoje
 const today = new Date(); // Pega a data atual.
@@ -19,7 +17,35 @@ const formattedDate = `${year}-${month}-${day}`;
 dataInput.setAttribute('max', formattedDate);
 
 
-let pctQuantidade=1
+
+function verificaQuantidade (quantidade, pacOUenf, modalId, alertId) {
+  if(quantidade==4){ // Verifica a quantidade de pacientes, se ouver 4, fecha o modal
+    const alertPlaceholder = document.getElementById(alertId); //'liveAlertPlaceholder'
+    const appendAlert = (mensagem, tipo) => {
+      const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-${tipo} alert-dismissible" role="alert">`,
+        `   <div>${mensagem}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+      alertPlaceholder.append(wrapper)};
+    appendAlert(`Número maximo de ${pacOUenf} alcançado.`, 'danger');
+    fechaModal (modalId);
+  };
+  console.log('a')
+};
+
+
+
+let pctQuantidade=0
+
+let bttnAddPact = document.getElementById('bttnPact');
+bttnAddPact.addEventListener("click", a);
+function a (){
+  verificaQuantidade (pctQuantidade, 'pacientes', 'staticBackdrop', 'liveAlertPlaceholder');
+};
+
 // Função para enviar novo paciente
 function enviaPaciente(){
   // Pega os elementos necessários
@@ -82,19 +108,7 @@ function enviaPaciente(){
 
   // Verificação final
   if(verfCpf==true && verfNome==true && verfData==true){ // Verfica se cpf, nome e data são verdadeiros.
-    if(pctQuantidade>4){ // Verifica a quantidade de pacientes.
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder2');
-    const appendAlert = (message, type) => {
-      const wrapper = document.createElement('div')
-      wrapper.innerHTML = [
-        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-        `   <div>${message}</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-      ].join('')
-      alertPlaceholder.append(wrapper)};
-    appendAlert('Número maximo de pacientes alcançado.', 'danger');
-    }else{ // Se tiver menos de 4 pacientes, adiciona o novo.
+      // Adiciona o novo paciente
       const lista = document.getElementById("ol2");
       let li = document.createElement("li");
       li.textContent = `Paciente: ${nome.value}`
@@ -106,19 +120,15 @@ function enviaPaciente(){
       ul2.textContent = `Idade: ${idade} anos`;
       li.appendChild(ul2);
       pctQuantidade++ // Soma mais um a contagem de pacientes.
-    };
 
     nome.value=''; cpf.value=''; // Limpa os inputs. //data=''; <-Não está funcionando
-    const modalElement = document.getElementById('staticBackdrop'); // Pega o elemento modal.
-    const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis
-    if(modalInstancia){ // Se a instancia estiver funcionando/existir
-      modalInstancia.hide(); // Fecha o modal.
-    }else{ // Caso algo de errado, mostra ERROR no console.
-      console.log('ERROR');
-    }};
+    console.log(pctQuantidade)
+    fechaModal ('staticBackdrop');  // Ultiliza a função fechaModal e indica qual deve ser fechado
+  };
 };
 
-let enfQuantidade=1
+
+let enfQuantidade=0
 // Função para enviar novo enfermeiro
 function enviaEnfermeiro(){
   // Pega os elementos necessários
@@ -148,7 +158,7 @@ function enviaEnfermeiro(){
 
   // Verificação final
   if(verfCoren==true && verfNome==true){ // Verfica se o coren e o nome são verdadeiros.
-    if(enfQuantidade>4){ // Verifica a quantidade de enfermeiros.
+    if(enfQuantidade==4){ // Verifica a quantidade de enfermeiros.
       const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
       const appendAlert = (message, type) => {
         const wrapper = document.createElement('div')
@@ -172,13 +182,18 @@ function enviaEnfermeiro(){
     };
 
     nome.value=''; coren.value=''; // Limpa os inputs.
-    const modalElement = document.getElementById('staticBackdrop2'); // Pega o elemento modal.
-    const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis,
-    if(modalInstancia){ // Se a instancia estiver funcionando/existir,
-      modalInstancia.hide(); // Fecha o modal.
-    }else{ // Caso algo de errado, mostra ERROR no console.
-      console.log('ERROR');
+    fechaModal ('staticBackdrop2'); // Ultiliza a função fechaModal e indica qual deve ser fechado
     };
+};
+
+// Função para fechar modal
+function fechaModal ( modalId ) {
+  const modalElement = document.getElementById( modalId ); // Pega o elemento modal, usando id fornecido pelo parametro
+  const modalInstancia = bootstrap.Modal.getInstance(modalElement); // Faz o método .hide (e outros) serem utilizaveis
+  if(modalInstancia){ // Se a instancia estiver funcionando/existir
+    modalInstancia.hide(); // Fecha o modal.
+  }else{ // Caso algo de errado, mostra ERROR no console.
+    console.log('ERROR');
   };
 };
 

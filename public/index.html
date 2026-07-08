@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>SenseCare</title>
 </head>
 <body>
@@ -14,6 +16,7 @@
             <div id="div-esquerda" class="col-8 h-100 d-flex flex-column">
                 <!-- Area acima -->
                 <div id="left-top" class="row g-0 w-100 overflow-auto">
+
                     <!-- Area para enfermeiros -->
                     <div class="col" id="color1">
                         <div id="areaBotaoModal"><!-- Botão para o modal de adicionar enfermeiros -->
@@ -53,13 +56,14 @@
                         <div class="text-start" id="areaLista">
                             <h4>Enfermeiros</h4>
                             <ol id="ol"></ol>
-                            <div id="liveAlertPlaceholder"></div>
+                            <div id="liveAlertPlaceholder2"></div>
                         </div>
                     </div>
+
                     <!-- Area para pacientes -->
                     <div class="col" id="color2">
                         <div id="areaBotaoModal"><!-- Botão para o modal de adicionar paciente -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adicionar paciente</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="bttnPact">Adicionar paciente</button>
                             <!-- Modal de adicionar paciente -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
@@ -116,7 +120,7 @@
                         <div class="text-start" id="areaLista">
                             <h4>Pacientes</h4>
                             <ol id="ol2"></ol>
-                            <div id="liveAlertPlaceholder2"></div>
+                            <div id="liveAlertPlaceholder"></div>
                         </div>
                     </div>
                 </div>
@@ -135,14 +139,15 @@
                     <div id="alerta">
                         <img src="/imgs/defaut.jpg" class="mx-auto d-block" id="pulseira">
                     </div>
+                    
                 </div>
                 <!-- Area abaixo -->
                 <div id="right-bottom" class="w-100">
-                    <button type="button" class="btn btn-primary" onclick="mandaSinal('desliga')">Desligar</button><br><br>
+                    <button type="button" class="btn btn-primary" onclick="mandaSinal('desliga')">Desligar <i class="bi bi-dash-circle"></i></button><br><br>
                     <div class="btn-group" role="group" aria-label="Basic">
-                        <button type="button" class="btn btn-primary" onclick="mandaSinal('critico')">Alerta</button>
-                        <button type="button" class="btn btn-primary" onclick="mandaSinal('rotina')">Rotina</button>
-                        <button type="button" class="btn btn-primary" onclick="mandaSinal('chamado')">Chamado</button>
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('critico')">Alerta <i class="bi bi-exclamation-triangle"></i></button>
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('rotina')">Rotina <i class="bi bi-exclamation-circle"></i></button>
+                        <button type="button" class="btn btn-primary" onclick="mandaSinal('chamado')">Chamado <i class="bi bi-exclamation-circle"></i></button>
                     </div>
                 </div>
             </div>
@@ -150,6 +155,7 @@
     </div>
 
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
